@@ -1,0 +1,66 @@
+.hero-full-wrapper {
+  width: 100%;
+  max-width: 100vw; /* Full screen width */
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 0; /* Removes tiny gap at bottom of images */
+}
+
+.hero-slider-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.hero-slide-item {
+  min-width: 100%; /* Each slide is exactly one screen wide */
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.hero-full-img {
+  width: 100%;
+  height: auto;
+  /* Since your specific size is 1174x335, we use object-fit to ensure 
+     it looks good on ultrawide monitors without getting distorted. */
+  object-fit: cover; 
+  display: block;
+}
+
+/* Dots Styling */
+.hero-navigation-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-dot.active {
+  background-color: #00c9a7; /* Teal brand color */
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(0, 201, 167, 0.5);
+}
+
+/* Ensure no side gaps on the body */
+:root {
+  --scrollbar-width: calc(100vw - 100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

@@ -1,0 +1,77 @@
+/* Ensure the bar is at the very top with no gaps */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.top-bar-wrapper {
+  width: 100%;
+  background-color: #1e1e1e; /* Match the dark charcoal in your image */
+  color: #ffffff;
+  padding: 8px 0; /* Vertical thickness of the bar */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: space-between; /* This pushes icons left and info right */
+  align-items: center;
+  max-width: 95%; /* Adjust to 100% if you want it touching the screen edges */
+  margin: 0 auto;
+}
+
+/* Left Side Socials */
+.top-bar-socials {
+  display: flex;
+  gap: 25px; /* Spacing between FB, Twitter, LinkedIn */
+  padding-left: 20px;
+}
+
+.top-bar-socials a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.top-bar-socials a:hover {
+  opacity: 0.7;
+}
+
+/* Right Side Contact */
+.top-bar-contact {
+  display: flex;
+  gap: 30px; /* Spacing between Phone and Email */
+  padding-right: 20px;
+}
+
+.contact-unit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-unit a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-unit span {
+  white-space: nowrap;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .top-bar-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .top-bar-socials, .top-bar-contact {
+    padding: 0;
+  }
+}
